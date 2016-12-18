@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/file_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="48dp"
+    android:background="@drawable/activated_background"
+    android:padding="2dip" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:src="@drawable/ic_folder" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="vertical"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="File Name"
+            android:textColor="?zTextColor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/convert_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style_y_round"
+        android:drawableTop="?ic_cached_36dp"
+        android:maxWidth="64dp"
+        android:minHeight="56dp"
+        android:minWidth="56dp"
+        android:padding="4dp"
+        android:text="@string/convert"
+        android:textColor="?zTextColor"
+        android:textSize="12sp"
+        android:layout_weight="0"
+        android:focusable="false" />
+
+</LinearLayout>

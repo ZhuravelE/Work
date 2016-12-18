@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">zNotesConverter</string>
+    <string name="pick_directory">Выберите папку</string>
+    <string name="convert">Конвер-ть</string>
+    <string name="please_wait">Пожалуйста, подождите.</string>
+    <string name="peak_format">Выберите формат</string>
+    <string name="conversion_completed">Конвертация завершена</string>
+</resources>

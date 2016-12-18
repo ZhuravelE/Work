@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="themeZNotes" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="themeZNotes.DarkGreen" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="zTextColor">@color/clr_white</item>
+        <item name="zBackgroundColor">@color/clr_green_dark1</item>
+        <item name="zBackgroundShadowColor">@color/clr_green_dark3</item>
+        <item name="android:windowBackground">@color/clr_green_dark1</item>
+        <item name="zFilterTextColor">@color/clr_yellow</item>
+        <item name="ic_cached_36dp">@drawable/ic_cached_white_36dp</item>
+    </style>
+
+    <style name="themeZNotes.Black" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="zTextColor">@color/clr_white</item>
+        <item name="zBackgroundColor">@color/clr_black</item>
+        <item name="zBackgroundShadowColor">@color/clr_gray_dark</item>
+        <item name="android:windowBackground">@color/clr_black</item>
+        <item name="zFilterTextColor">@color/clr_yellow</item>
+        <item name="ic_cached_36dp">@drawable/ic_cached_white_36dp</item>
+    </style>
+
+    <style name="themeZNotes.White" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="zTextColor">@color/clr_black</item>
+        <item name="zBackgroundColor">@color/clr_white</item>
+        <item name="zBackgroundShadowColor">@color/clr_gray_light2</item>
+        <item name="android:windowBackground">@color/clr_white</item>
+        <item name="zFilterTextColor">@color/clr_yellow_2</item>
+        <item name="ic_cached_36dp">@drawable/ic_cached_black_36dp</item>
+    </style>
+
+</resources>

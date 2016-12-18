@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/clr_blue_dark"
+        android:padding="5dip"
+        android:text="@string/pick_directory"
+        android:textColor="@color/clr_yellow"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/titleManager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textInfo"
+        android:maxLines="2"
+        android:minHeight="32dp"
+        android:padding="5dip"
+        android:text="Path"
+        android:textColor="?zTextColor"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleManager"
+        android:animationCache="false"
+        android:cacheColorHint="@color/clr_transparent"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="true"
+        android:scrollingCache="false" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="invisible" >
+    </ProgressBar>
+
+</RelativeLayout>

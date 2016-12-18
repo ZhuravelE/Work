@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">zNotesConverter</string>
+    <string name="pick_directory">Select folder</string>
+    <string name="convert">Convert</string>
+    <string name="please_wait">Please wait</string>
+
+    <string-array name="convert_format">
+        <item>txt</item>
+        <item>htm</item>
+    </string-array>
+    <string name="peak_format">Peak format</string>
+    <string name="conversion_completed">Conversion completed</string>
+</resources>

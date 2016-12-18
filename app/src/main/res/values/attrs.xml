@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="zNotesTheme">
+        <attr name="zBackgroundColor" format="reference|color" />
+        <attr name="zBackgroundShadowColor" format="reference|color" />
+        <attr name="zBottomPanelBackg" format="reference|color" />
+        <attr name="zSeparatorColor" format="reference|color" />
+        <attr name="zTextColor" format="reference|color" />
+        <attr name="zFilterTextColor" format="reference|color" />
+        <attr name="ic_cached_36dp" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ThreeStateCheckBox">
+        <attr name="shadow" format="boolean" />
+        <attr name="state" format="integer" />
+    </declare-styleable>
+
+</resources>
