@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class OpenDbHelper extends SQLiteOpenHelper implements BaseColumns {
-    private static final int DATABASE_VERSION = 30;
+    private static final int DATABASE_VERSION = 29;
     
     public static String DB_DIRECTORY = null;
     //public static String dbName = "booksapp.db";

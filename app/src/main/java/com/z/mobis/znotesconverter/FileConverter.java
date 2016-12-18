@@ -108,8 +108,8 @@ public class FileConverter {
             crsr = sqliteDB.query(PUNKT_TABLE, new String[]{PUNKT_NAME, PUNKT_DESC}, _ID + " = " + Long.toString(id), null, null, null, null);
             if (crsr.moveToFirst()){
                 do {
-                    name = indent + crsr.getString(0);
-                    desc = indent + crsr.getString(1);
+                    name = indent + crsr.getString(0).replaceAll("\n", "\n" + indent);
+                    desc = indent + crsr.getString(1).replaceAll("\n", "\n" + indent);
                     fileSaver.write(name, desc);
                 }while (crsr.moveToNext());
                 crsr.close();
