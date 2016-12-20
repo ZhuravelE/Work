@@ -73,15 +73,15 @@ public class FileConverter {
                 SQLiteDatabase sqliteDB = dbManager.getInstance().openReadableDatabase();
                 int dbVersion = sqliteDB.getVersion();
 
-                sqliteDB.beginTransaction();
+                /*sqliteDB.beginTransaction();*/
                 try {
                     getItems(sqliteDB, getChildrenID(sqliteDB, 0L), "");
                     fileSaver.closeWritableFile();
                 } catch (IOException e) {
                     e.printStackTrace();
-                } finally {
+                } /*finally {
                     sqliteDB.endTransaction();
-                }
+                }*/
                 dbManager.getInstance().closeDatabase();
             } catch (SQLException sqlerror) {
                 Log.e(LOG_TAG + "convert error", sqlerror.getMessage());
@@ -105,7 +105,7 @@ public class FileConverter {
         indent = indent + fileSaver.getTab();
         Cursor crsr;
         for (Long id: ids){
-            crsr = sqliteDB.query(PUNKT_TABLE, new String[]{PUNKT_NAME, PUNKT_DESC}, _ID + " = " + Long.toString(id), null, null, null, null);
+            crsr = sqliteDB.query(PUNKT_TABLE, new String[]{PUNKT_NAME, PUNKT_DESC}, _ID + " = ?", new String[]{Long.toString(id)}, null, null, null);
             if (crsr.moveToFirst()){
                 do {
                     name = indent + crsr.getString(0).replaceAll("\n", "\n" + indent);
@@ -120,7 +120,7 @@ public class FileConverter {
 
     private List<Long> getChildrenID(SQLiteDatabase sqliteDB, long parentId){
         List<Long> childrenId = new ArrayList<>();
-        Cursor crsr = sqliteDB.query(LINK_TABLE, new String[]{LINK_CHILD_ID}, LINK_PARENT_ID + " = " + Long.toString(parentId), null, null, null, null);
+        Cursor crsr = sqliteDB.query(LINK_TABLE, new String[]{LINK_CHILD_ID}, LINK_PARENT_ID + " = ?", new String[]{Long.toString(parentId)}, null, null, null);
         if (crsr.moveToFirst()){
             do {
                 childrenId.add(crsr.getLong(0));
